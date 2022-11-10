@@ -4,27 +4,50 @@
 
 .about-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
+}
+
+.about-list-item {
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px)/2);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 90px)/4);
+    }
 }
 
 .about-list-container {
     @extend %align;
     
-    width: 270px;
+    width: 450px;
     height: 120px;
     background-color: var(--fifth-background);
     border-radius: 4px;
     margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {
+        width: 354px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+    }
 }
 
 .about-title-item {
     @include font (700, 14px, 16px);
     
     letter-spacing: 0.03em;
+    text-align: center;
     text-transform: uppercase;
     color: var(--accent-text-color);
     margin-bottom: 10px;
+
+    @media screen and (min-width: 480px) {
+        text-align: left;
+    }
 }
 
 .about-paragraph {

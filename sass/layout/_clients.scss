@@ -1,12 +1,26 @@
 .clients-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
+}
+
+.clients-list-item {
+    width: calc((100% - 30px)/2);
+    
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 60px)/3);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 150px)/6);
+    }
+
+    
 }
 
 .clients-list-link {
     @extend %align;
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid var(--seven-border-color);
     border-radius: 4px;
@@ -16,6 +30,14 @@
     &:focus {
         border: 1px solid var(--second-border-color);
         border-radius: 4px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 226px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: 170px;
     }
 }
 

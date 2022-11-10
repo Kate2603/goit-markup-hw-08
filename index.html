@@ -42,6 +42,47 @@
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
+            <button class="btn__open" type="button" data-menu-open>O</button>
+        </div>
+
+        <div class="mob is-hidden" data-menu>
+            <div class="container">
+                <div class="mob-top">
+                    <button class="btn__close" type="button" data-menu-close>X</button>
+                    <ul class="carte list">
+                        <li class="carte__point"><a class="carte__reference  current" href="index.html">Студія</a></li>
+                        <li class="carte__point"><a class="carte__reference" href="portfolio.html">Портфоліо</a></li>
+                        <li class="carte__point"><a class="carte__reference" href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="mob-bottom">
+                    <ul class="connect list">
+                        <li class="connect__menu">
+                            <a class="connect__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                        <li class="connect__menu">
+                            <a class="connect__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="societal list">
+                        <li class="societal__item">
+                            <a class="societal__link" href="">Instagram</a>
+                        </li>
+                        <li class="societal__item">
+                            <a class="societal__link" href="">Twitter</a>
+                        </li>
+                        <li class="societal__item">
+                            <a class="societal__link" href="">Facebook</a>
+                        </li>
+                        <li class="societal__item">
+                            <a class="societal__link" href="">linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
         </div>
     </header>
     <!--MAIN-->
@@ -105,25 +146,34 @@
                 <ul class="work-img-container">
                     <li class="work-list">
                         <div class="work-list-wrapper">
-                            <img class="work-img" src="./images/about/img0.jpg" alt="фото людина друкує на комп'ютері"
-                                width="370" height="294" />
+                            <picture>
+                                <source  
+                                srcset="./images/about/img0.jpg 1x, ./images/about/img0-2x.jpg 2x"
+                                media="(min-width: 1200px)"/>
+                                <img class="work-img" src="./images/about/img0.jpg" alt="фото людина друкує на комп'ютері" width="370" height="294" />
+                            </picture>
                             <p class="work-overlay">Десктопні додатки</p>
                         </div>
                     </li>
 
                     <li class="work-list">
                         <div class="work-list-wrapper">
-                            <img class="work-img" src="./images/about/img1.jpg"
-                                alt="фото людина друкує на комп'ютері і дивиться на смартфон" width="370"
-                                height="294" />
+                            <picture>
+                                <source 
+                                srcset="./images/about/img1.jpg 1x, ./images/about/img1-2x.jpg 2x" media="(min-width: 1200px)" />
+                                <img class="work-img" src="./images/about/img1.jpg" alt="фото людина друкує на комп'ютері і дивиться на смартфон"
+                                    width="370" height="294" />
+                            </picture>
                             <p class="work-overlay">Мобільні додатки</p>
                         </div>
                     </li>
 
                     <li class="work-list">
                         <div class="work-list-wrapper">
-                            <img class="work-img" src="./images/about/img2.jpg" alt="фото людина малює на планшеті"
-                                width="370" height="294" />
+                            <picture>
+                                <source srcset="./images/about/img2.jpg 1x, ./images/about/img2-2x.jpg 2x" media="(min-width: 1200px)" />
+                                <img class="work-img" src="./images/about/img2.jpg" alt="фото людина малює на планшеті" width="370" height="294" />
+                            </picture>
                             <p class="work-overlay">Дизайнерські рішення</p>
                         </div>
                     </li>
@@ -136,8 +186,19 @@
                 <h2 class="all-titles">Наша команда</h2>
                 <ul class="list menu-team">
                     <li class="team-cards">
-                        <img class="team-img" src="./images/team/igor.jpg" alt="Фото Ігор Дем'яненко" width="270"
-                            height="260" />
+                        <picture>
+                            <source 
+                            srcset="./images/team/igor.jpg 1x, ./images/team/igor-2x.jpg 2x" 
+                            media="(min-width: 1200px)" />
+                            <source 
+                            srcset="./images/team/igor-tab.jpg 1x, ./images/team/igor-tab-2x.jpg 2x" 
+                            media="(min-width: 768px)" />
+                            <source 
+                            srcset="./images/team/igor-mob.jpg 1x, ./images/team/igor-mob-2x.jpg 2x" 
+                            media="(max-width: 767px)" />
+                            <img class="team-img" src="./images/team/igor.jpg" alt="Фото Ігор Дем'яненко" width="450"/>
+                        </picture>
+                        
                         <div class="team-subscription">
                             <h3 class="team-title">Ігор Дем'яненко</h3>
                             <p class="team-paragraph" lang="en">Product Designer</p>
@@ -174,8 +235,19 @@
                         </div>
                     </li>
                     <li class="team-cards">
-                        <img class="team-img" src="./images/team/olga.jpg" alt="Фото Ольга Рєпіна" width="270"
-                            height="260" />
+                        <picture>
+                            <source 
+                            srcset="./images/team/olga.jpg 1x, ./images/team/olga-2x.jpg 2x" 
+                            media="(min-width: 1200px)" />
+                            <source 
+                            srcset="./images/team/olga-tab.jpg 1x, ./images/team/olga-tab-2x.jpg 2x" 
+                            media="(min-width: 768px)" />
+                            <source 
+                            srcset="./images/team/olga-mob.jpg 1x, ./images/team/olga-mob-2x.jpg 2x" 
+                            media="(max-width: 767px)" />
+                            <img class="team-img" src="./images/team/olga.jpg" alt="Фото Ольга Рєпіна" width="450"/>
+                        </picture>
+                        
                         <div class="team-subscription">
                             <h3 class="team-title">Ольга Рєпіна</h3>
                             <p class="team-paragraph" lang="en">Frontend Developer</p>
@@ -212,8 +284,19 @@
                         </div>
                     </li>
                     <li class="team-cards">
-                        <img class="team-img" src="./images/team/nikolay.jpg" alt="Фото Микола Тарасов" width="270"
-                            height="260" />
+                        <picture>
+                            <source 
+                            srcset="./images/team/nikolay.jpg 1x, ./images/team/nikolay-2x.jpg 2x" 
+                            media="(min-width: 1200px)" />
+                            <source 
+                            srcset="./images/team/nikolay-tab.jpg 1x, ./images/team/nikolay-tab-2x.jpg 2x" 
+                            media="(min-width: 768px)" />
+                            <source 
+                            srcset="./images/team/nikolay-mob.jpg 1x, ./images/team/nikolay-mob-2x.jpg 2x" 
+                            media="(max-width: 767px)" />
+                            <img class="team-img" src="./images/team/nikolay.jpg" alt="Фото Микола Тарасов" width="450"/>
+                        </picture>
+                        
                         <div class="team-subscription">
                             <h3 class="team-title">Микола Тарасов</h3>
                             <p class="team-paragraph" lang="en">Marketing</p>
@@ -250,8 +333,19 @@
                         </div>
                     </li>
                     <li class="team-cards">
-                        <img class="team-img" src="./images/team/mixail.jpg" alt="Фото Михайло Єрмаков" width="270"
-                            height="260" />
+                        <picture>
+                            <source 
+                            srcset="./images/team/mixail.jpg 1x, ./images/team/mixail-2x.jpg 2x" 
+                            media="(min-width: 1200px)" />
+                            <source 
+                            srcset="./images/team/mixail-tab.jpg 1x, ./images/team/mixail-tab-2x.jpg 2x" 
+                            media="(min-width: 768px)" />
+                            <source 
+                            srcset="./images/team/mixail-mob.jpg 1x, ./images/team/mixail-mob-2x.jpg 2x" 
+                            media="(max-width: 767px)" />
+                            <img class="team-img" src="./images/team/mixail.jpg" alt="Фото Михайло Єрмаков" width="450"/>
+                        </picture>
+                        
                         <div class="team-subscription">
                             <h3 class="team-title">Михайло Єрмаков</h3>
                             <p class="team-paragraph" lang="en">UI Designer</p>
@@ -462,6 +556,7 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

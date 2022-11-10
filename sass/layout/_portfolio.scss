@@ -1,7 +1,22 @@
 .buttons {
     @extend %align;
+
+    display: flex;
+    gap: 8px;
+    row-gap: 15px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 46px;
+
+    @media screen and (min-width: 768px) {
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
     
-    margin-bottom: 50px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
 }
 
 .attachment:not(:last-child) {
@@ -59,9 +74,24 @@
 }
 
 .portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    display: block;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        width: 768px;
+        justify-content: flex-start;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }
 
 .portfolio__cards {
