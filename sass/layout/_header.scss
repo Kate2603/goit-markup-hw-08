@@ -186,6 +186,15 @@
     
 }
 
+.open__icon {
+    fill: var(--fourth-fill);
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-fill);
+    }
+}
+
 .mobile-menu {
     @media screen and (max-width: 480px) {
         position: absolute;
@@ -222,6 +231,9 @@
     border: none;
 }
 
+.close__icon {
+    fill: var(--fourth-fill);
+} 
 .carte {
     margin-bottom: 64px;
 }
