@@ -48,9 +48,8 @@
 
 
     @media screen and (min-width: 768px) {
-
         display: flex;
-            align-items: center;
+        align-items: center;
     }
 }
 
@@ -188,11 +187,6 @@
 
 .open__icon {
     fill: var(--fourth-fill);
-
-    &:hover,
-    &:focus {
-        fill: var(--accent-fill);
-    }
 }
 
 .mobile-menu {
@@ -206,6 +200,8 @@
         padding-top: 48px;
         padding-bottom: 48px;
         padding-left: 40px;
+
+        transition: opacity var(--transition-duration-and-func);
         
         >.container {
             height: 100%;
@@ -221,6 +217,14 @@
         }
 }
 
+.mobile-menu.is-hidden {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    width: 100%;
+    height: 100%;
+}
+
 .mob-top {
     margin-bottom: 50px;
 }
@@ -233,6 +237,13 @@
 
 .close__icon {
     fill: var(--fourth-fill);
+    transition: fill var(--transition-duration-and-func);
+    
+        &:hover,
+        &:focus {
+            fill: var(--accent-fill);
+        }
+
 } 
 .carte {
     margin-bottom: 64px;
@@ -245,6 +256,8 @@
 .carte__reference {
     @include font (500, 40px, 47px);
     letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--accent-text-color);
 }
 
 .connect {
@@ -278,9 +291,11 @@
     @include font (500, 18px, 22px);
     letter-spacing: 0.02em;
     color: var(--fourth-text-color);
+    text-decoration: none;
     
 }
 
 .societal__link:not(:last-child) {
     border-left: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
 }

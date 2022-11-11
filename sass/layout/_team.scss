@@ -26,33 +26,44 @@
 
 .team-img {
     display: block;
-    min-width: 100%;
-    height: auto;
-
     width: 100%;
+    height: auto;
 }
 
 .team-subscription {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 .team-title {
-    @include font (500, 16px, 19px);
+    @include font (500, 16px, 18px);
     
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--accent-text-color);
     margin-bottom: 10px;
+
+    @media screen and (min-width: 1200px) {
+        @include font (500, 16px, 19px);
+    }
 }
 
 .team-paragraph {
-    @include font (400, 16px, 19px); 
+    @include font (400, 16px, 18px); 
 
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
     margin-bottom: 16px;
+
+    @media screen and (min-width: 1200px) {
+        @include font (400, 16px, 19px);
+    }
 }
 
 .social-list {

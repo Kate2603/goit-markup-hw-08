@@ -23,17 +23,24 @@
 }
 
 .all-titles {
-    @include font (700, 36px, 42px); 
+    @include font (700, 28px, 32px); 
     
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--accent-text-color);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+        @include font (700, 36px, 42px);
+        margin-bottom: 50px;
+    }
+
 }
 
 .work-img-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 30px;
 }
 
