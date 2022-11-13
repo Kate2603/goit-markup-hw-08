@@ -18,7 +18,7 @@
 <body>
     <!-- HEADER-->
     <header class="header">
-        <div class="page-header container">
+        <!-- <div class="page-header container">
             <nav class="page-nav">
                 <a class="logotype link" href="index.html" lang="en">Web<span
                         class="logotype__header">Studio</span></a>
@@ -28,6 +28,11 @@
                     <li class="menu__item"><a class="menu__link" href="contact.html">Контакты</a></li>
                 </ul>
             </nav>
+
+            <button class="btn__open" type="button" data-menu-open><svg class="open__icon" width="40" height="40">
+                    <use href="./images/sprite.svg#burger-open"></use>
+                </svg></button>
+
             <ul class="list contact">
                 <li class="contact__menu">
                     <a class="contact__list link" href="mailto:info@devstudio.com"><svg class="contact__icon"
@@ -42,22 +47,23 @@
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
-            <button class="btn__open" type="button" data-menu-open><svg class="open__icon" width="40" height="40"><use href="./images/sprite.svg#icon-open"></use>
-            </svg></button>
-        </div>
+        </div> -->
 
-        <div class="mobile-menu is-hidden" data-menu>
-            <div class="container">
+        <div class="mobile-menu is-open" data-menu>
+            <div class="container mobile-menu__container">
                 <div class="mob-top">
-                    <button class="btn__close" type="button" data-menu-close><svg class="close__icon" width="40" height="40"></svg><use href="./images/sprite.svg#icon-close"></use>
-                    </svg></button>
+                    <button class="btn__close" type="button" data-menu-close><svg class="close__icon" width="40"
+                            height="40"></svg>
+                        <use href="./images/sprite.svg#icon-close-btn"></use>
+                        </svg>
+                    </button>
                     <ul class="carte list">
                         <li class="carte__point"><a class="carte__reference  current" href="index.html">Студія</a></li>
                         <li class="carte__point"><a class="carte__reference" href="portfolio.html">Портфоліо</a></li>
                         <li class="carte__point"><a class="carte__reference" href="contact.html">Контакты</a></li>
                     </ul>
                 </div>
-                
+        
                 <div class="mob-bottom">
                     <ul class="connect list">
                         <li class="connect__menu">
@@ -67,7 +73,7 @@
                             <a class="connect__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                         </li>
                     </ul>
-                    
+        
                     <ul class="societal list">
                         <li class="societal__item">
                             <a class="societal__link" href="">Instagram</a>
@@ -83,19 +89,19 @@
                         </li>
                     </ul>
                 </div>
-                
+        
             </div>
         </div>
     </header>
     <!--MAIN-->
     <main>
         <!--HERO-->
-        <section class="hero background">
+        <!-- <section class="hero background">
             <h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br>ВАШОГО БІЗНЕСУ</h1>
             <button class="modal-btn modal-btn-container" type="button" data-modal-open>Замовити послугу</button>
-        </section>
+        </section> -->
         <!--ABOUT-->
-        <section class="section">
+        <!-- <section class="section">
             <div class="container">
                 <h2 class="visually-hidden"></h2>
                 <ul class="about-list list">
@@ -140,17 +146,17 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <!--WORK-->
-        <section class="section work-section">
+        <!-- <section class="section work-section">
             <div class="container">
                 <h2 class="all-titles">Чим ми займаємося</h2>
                 <ul class="work-img-container">
                     <li class="work-list">
                         <div class="work-list-wrapper">
                             <picture>
-                                <source  
-                                srcset="./images/about/img0.jpg 1x, ./images/about/img0-2x.jpg 2x"
+                                <source srcset="./images/about/img0-w.webp 1x, ./images/about/img0-2x-w.webp 2x" media="(min-width: 1200px)" type="image/webp" />
+                                <source srcset="./images/about/img0.jpg 1x, ./images/about/img0-2x.jpg 2x"
                                 media="(min-width: 1200px)" type="image/jpeg"/>
                                 <img class="work-img" src="./images/about/img0.jpg" alt="фото людина друкує на комп'ютері" width="370" height="294" />
                             </picture>
@@ -161,8 +167,8 @@
                     <li class="work-list">
                         <div class="work-list-wrapper">
                             <picture>
-                                <source 
-                                srcset="./images/about/img1.jpg 1x, ./images/about/img1-2x.jpg 2x" media="(min-width: 1200px)" type="image/jpeg"/>
+                                <source srcset="./images/about/img1-w.webp 1x, ./images/about/img1-2x-w.webp 2x" media="(min-width: 1200px)" type="image/webp" />
+                                <source srcset="./images/about/img1.jpg 1x, ./images/about/img1-2x.jpg 2x" media="(min-width: 1200px)" type="image/jpeg"/>
                                 <img class="work-img" src="./images/about/img1.jpg" alt="фото людина друкує на комп'ютері і дивиться на смартфон"
                                     width="370" height="294" />
                             </picture>
@@ -173,6 +179,7 @@
                     <li class="work-list">
                         <div class="work-list-wrapper">
                             <picture>
+                                <source srcset="./images/about/img2-w.webp 1x, ./images/about/img2-2x-w.webp 2x" media="(min-width: 1200px)" type="image/webp" />
                                 <source srcset="./images/about/img2.jpg 1x, ./images/about/img2-2x.jpg 2x" media="(min-width: 1200px)" type="image/jpeg"/>
                                 <img class="work-img" src="./images/about/img2.jpg" alt="фото людина малює на планшеті" width="370" height="294" />
                             </picture>
@@ -181,23 +188,20 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <!--TEAM-->
-        <section class="section team-section">
+        <!-- <section class="section team-section">
             <div class="container">
                 <h2 class="all-titles">Наша команда</h2>
                 <ul class="list menu-team">
                     <li class="team-cards">
                         <picture>
-                            <source 
-                            srcset="./images/team/igor.jpg 1x, ./images/team/igor-2x.jpg 2x" 
-                            media="(min-width: 1200px)" type="image/jpeg" />
-                            <source 
-                            srcset="./images/team/igor-tab.jpg 1x, ./images/team/igor-tab-2x.jpg 2x" 
-                            media="(min-width: 768px)" type="image/jpeg"/>
-                            <source 
-                            srcset="./images/team/igor-mob.jpg 1x, ./images/team/igor-mob-2x.jpg 2x" 
-                            media="(max-width: 767px)" type="image/jpeg"/>
+                            <source srcset="./images/team/igor-w.webp 1x, ./images/team/igor-2x-w.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                            <source srcset="./images/team/igor.jpg 1x, ./images/team/igor-2x.jpg 2x" media="(min-width: 1200px)" type="image/jpeg" />
+                            <source srcset="./images/team/igor-tab-w.webp 1x, ./images/team/igor-tab-2x-w.webp 2x" media="(min-width: 768px)" type="image/webp" />
+                            <source srcset="./images/team/igor-tab.jpg 1x, ./images/team/igor-tab-2x.jpg 2x" media="(min-width: 768px)" type="image/jpeg"/>
+                            <source srcset="./images/team/igor-mob-w.webp 1x, ./images/team/igor-mob-2x-w.webp 2x" media="(min-width: 320px)" type="image/webp" />
+                            <source srcset="./images/team/igor-mob.jpg 1x, ./images/team/igor-mob-2x.jpg 2x" media="(min-width: 320px)" type="image/jpeg"/>
                             <img class="team-img" src="./images/team/igor.jpg" alt="Фото Ігор Дем'яненко" width="450"/>
                         </picture>
                         
@@ -238,15 +242,12 @@
                     </li>
                     <li class="team-cards">
                         <picture>
-                            <source 
-                            srcset="./images/team/olga.jpg 1x, ./images/team/olga-2x.jpg 2x" 
-                            media="(min-width: 1200px)" type="image/jpeg"/>
-                            <source 
-                            srcset="./images/team/olga-tab.jpg 1x, ./images/team/olga-tab-2x.jpg 2x" 
-                            media="(min-width: 768px)" type="image/jpeg"/>
-                            <source 
-                            srcset="./images/team/olga-mob.jpg 1x, ./images/team/olga-mob-2x.jpg 2x" 
-                            media="(max-width: 767px)" type="image/jpeg"/>
+                            <source srcset="./images/team/olga-w.webp 1x, ./images/team/olga-2x-w.webp 2x" media="(min-width: 1200px)" type="image/webp"/>
+                            <source srcset="./images/team/olga.jpg 1x, ./images/team/olga-2x.jpg 2x" media="(min-width: 1200px)" type="image/jpeg"/>
+                            <source srcset="./images/team/olga-tab-w.webp 1x, ./images/team/olga-tab-2x-w.webp 2x" media="(min-width: 768px)" type="image/webp"/>
+                            <source srcset="./images/team/olga-tab.jpg 1x, ./images/team/olga-tab-2x.jpg 2x" media="(min-width: 768px)" type="image/jpeg"/>
+                            <source srcset="./images/team/olga-mob-w.webp 1x, ./images/team/olga-mob-2x-w.webp 2x" media="(min-width: 320px)" type="image/webp"/>
+                            <source srcset="./images/team/olga-mob.jpg 1x, ./images/team/olga-mob-2x.jpg 2x" media="(min-width: 320px)" type="image/jpeg"/>
                             <img class="team-img" src="./images/team/olga.jpg" alt="Фото Ольга Рєпіна" width="450"/>
                         </picture>
                         
@@ -287,16 +288,13 @@
                     </li>
                     <li class="team-cards">
                         <picture>
-                            <source 
-                            srcset="./images/team/nikolay.jpg 1x, ./images/team/nikolay-2x.jpg 2x" 
-                            media="(min-width: 1200px)" type="image/jpeg"/>
-                            <source 
-                            srcset="./images/team/nikolay-tab.jpg 1x, ./images/team/nikolay-tab-2x.jpg 2x" 
-                            media="(min-width: 768px)" type="image/jpeg"/>
-                            <source 
-                            srcset="./images/team/nikolay-mob.jpg 1x, ./images/team/nikolay-mob-2x.jpg 2x" 
-                            media="(max-width: 767px)" type="image/jpeg"/>
-                            <img class="team-img" src="./images/team/nikolay.jpg" alt="Фото Микола Тарасов" width="450"/>
+                            <source srcset="./images/team/nikolay-w.webp 1x, ./images/team/nikolay-2x-w.webp 2x" media="(min-width: 1200px)" type="image/webp" />
+                            <source srcset="./images/team/nikolay.jpg 1x, ./images/team/nikolay-2x.jpg 2x" media="(min-width: 1200px)" type="image/jpeg" />
+                            <source srcset="./images/team/nikolay-tab-w.webp 1x, ./images/team/nikolay-tab-2x-w.webp 2x" media="(min-width: 768px)" type="image/webp" />
+                            <source srcset="./images/team/nikolay-tab.jpg 1x, ./images/team/nikolay-tab-2x.jpg 2x" media="(min-width: 768px)" type="image/jpeg" />
+                            <source srcset="./images/team/nikolay-mob-w.webp 1x, ./images/team/nikolay-mob-2x-w.webp 2x" media="(min-width: 320px)"type="image/webp" />
+                            <source srcset="./images/team/nikolay-mob.jpg 1x, ./images/team/nikolay-mob-2x.jpg 2x" media="(min-width: 320px)"type="image/jpeg" />
+                            <img class="team-img" src="./images/team/nikolay.jpg" alt="Фото Миколай Тарасов" width="450" />
                         </picture>
                         
                         <div class="team-subscription">
@@ -336,15 +334,12 @@
                     </li>
                     <li class="team-cards">
                         <picture>
-                            <source 
-                            srcset="./images/team/mixail.jpg 1x, ./images/team/mixail-2x.jpg 2x" 
-                            media="(min-width: 1200px)" type="image/jpeg"/>
-                            <source 
-                            srcset="./images/team/mixail-tab.jpg 1x, ./images/team/mixail-tab-2x.jpg 2x" 
-                            media="(min-width: 768px)" type="image/jpeg"/>
-                            <source 
-                            srcset="./images/team/mixail-mob.jpg 1x, ./images/team/mixail-mob-2x.jpg 2x" 
-                            media="(max-width: 767px)" type="image/jpeg"/>
+                            <source srcset="./images/team/mixail-w.webp 1x, ./images/team/mixail-2x-w.webp 2x" media="(min-width: 1200px)" type="image/webp" />
+                            <source srcset="./images/team/mixail.jpg 1x, ./images/team/mixail-2x.jpg 2x" media="(min-width: 1200px)" type="image/jpeg" />
+                            <source srcset="./images/team/mixail-tab-w.webp 1x, ./images/team/mixail-tab-2x-w.webp 2x" media="(min-width: 768px)" type="image/webp" />
+                            <source srcset="./images/team/mixail-tab.jpg 1x, ./images/team/mixail-tab-2x.jpg 2x" media="(min-width: 768px)" type="image/jpeg" />
+                            <source srcset="./images/team/mixail-mob-w.webp 1x, ./images/team/mixail-mob-2x-w.webp 2x" media="(min-width: 320px)" type="image/webp" />
+                            <source srcset="./images/team/mixail-mob.jpg 1x, ./images/team/mixail-mob-2x.jpg 2x" media="(min-width: 320px)" type="image/jpeg" />
                             <img class="team-img" src="./images/team/mixail.jpg" alt="Фото Михайло Єрмаков" width="450"/>
                         </picture>
                         
@@ -385,9 +380,9 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <!--CLIENTS-->
-        <section class="section">
+        <!-- <section class="section">
             <div class="container">
                 <h2 class="all-titles">Постійні клієнти</h2>
                 <ul class="clients-list">
@@ -435,10 +430,10 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
     </main>
     <!--FOOTER-->
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="footer__container container">
         <div class="footer__list">
             <a class="logo link" href="index.html" lang="en">Web<span
@@ -503,9 +498,9 @@
             </form>
         </div>
     </div>
-</footer>
+</footer> -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal-close-btn" data-modal-close>
                 <svg width="11" height="11" class="modal-close-btn-icon">
@@ -556,9 +551,10 @@
                 <button type="submit" class="modal-form-submit">Відправити</button>
             </form>
         </div>
-    </div>
-    <script src="./js/modal.js"></script>
+    </div> -->
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
+    
 </body>
 
 </html>

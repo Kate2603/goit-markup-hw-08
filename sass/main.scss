@@ -1,25 +1,26 @@
-@import './utils/_variables.scss';
-@import './utils/visually-hidden';
-@import './utils/placeholders';
-@import './utils/mixins';
+@import './utils/variables.scss';
+@import './utils/visually-hidden.scss';
+@import './utils/placeholders.scss';
+@import './utils/mixins.scss';
 
-@import './base/_common.scss';
-@import './base/_section.scss';
-@import './base/_container.scss';
+@import './base/common.scss';
+@import './base/section.scss';
+@import './base/container.scss';
 
-@import './components/backdrop';
-@import './components/modal-window';
-@import './components/modal-form';
+@import './components/mobile-menu.scss';
+@import './components/backdrop.scss';
+@import './components/modal-window.scss';
+@import './components/modal-form.scss';
 
-@import './layout/header';
-@import './layout/hero';
-@import './layout/about';
-@import './layout/work';
-@import './layout/team';
-@import './layout/clients';
-@import './layout/footer';
+@import './layout/header.scss';
+@import './layout/hero.scss';
+@import './layout/about.scss';
+@import './layout/work.scss';
+@import './layout/team.scss';
+@import './layout/clients.scss';
+@import './layout/footer.scss';
 
-@import './layout/portfolio';
+@import './layout/portfolio.scss';
 
 
 

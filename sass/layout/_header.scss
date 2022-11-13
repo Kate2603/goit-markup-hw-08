@@ -1,62 +1,54 @@
-.header {
-    border-bottom: 1px solid #ECECEC;
+//0-767-mobile
+@media screen and (max-width: 767px) {
+    .menu {
+        display: none;
+    }
+    
+    .contact {
+        display: none;
+    }
+
+    .btn__open {
+        display: block;
+        border: none;
+        margin-left: auto;
+        min-height: 40px;
+        min-width: 40px;
+        line-height: 0;
+        cursor: pointer;
+        background-color: var(--accent-background);
+
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
 }
 
 .page-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .page-nav {
-    display: flex;
-    align-items: center;
+    position: relative;
 }
 
 .logotype {
     font-family: var(--second-font);
-    
+
     @include font (700, 24px, 28px);
-    
+
     letter-spacing: 0.03em;
     color: var(--fourth-text-color);
     margin-left: 15px;
+    margin-right: auto;
     padding-top: 16px;
     padding-bottom: 16px;
-
-    @media screen and (min-width: 768px) {
-        margin-left: 15px;
-        margin-right: 88px;
-        padding-top: 26px;
-        padding-bottom: 26px;
-
-    }
-    
-    @media screen and (min-width: 1200px) {
-        @include font (700, 26px, 31px);
-        margin-right: 93px;
-        padding-top: 24px;
-        padding-bottom: 25px;
-    }
 }
 
 .logotype__header {
     color: var(--accent-text-color);
-}
-
-.menu {
-    display: none;
-
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        align-items: center;
-    }
-}
-
-.menu__item:not(:last-child) {
-    @media screen and (min-width: 768px) {
-        margin-right: 50px;
-    }
 }
 
 .menu__link {
@@ -64,7 +56,7 @@
     display: block;
 
     @include font (500, 14px, 16px);
-    
+
     letter-spacing: 0.02em;
     color: var(--accent-text-color);
     list-style: none;
@@ -80,112 +72,128 @@
     &.current {
         color: var(--fourth-text-color);
     }
+}
 
-    @media screen and (min-width: 768px) {
+//768-tablet
+@media screen and (min-width: 768px) {
+    .btn__open {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .header {
+        border-bottom: 1px solid #ECECEC;
+    }
+
+    .page-header {
+        @extend %align;
+    }
+
+    .page-nav {
+        @extend %align;
+    }
+
+    .logotype {
+        margin-right: 80px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+
+    .menu {
+        @extend %align;
+    }
+
+    .menu__item:not(:last-child) {
+        margin-right: 50px;
+    }
+
+    .menu__link {
         padding-top: 32px;
         padding-bottom: 32px;
     }
-}
 
-.current {
-    display: block;
-    color: var(--third-color);
-
-    &::after {
-        content: "";
-        position: absolute;
+    .current {
         display: block;
-        width: 100%;
-        height: 4px;
-        background-color: var(--third-background);
-        border-radius: 2px;
-        left: 0;
-        bottom: -1px;
-    }
-}
+        color: var(--third-color);
 
-.contact {
-    display: none;
-    
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: var(--third-background);
+            border-radius: 2px;
+            left: 0;
+            bottom: -1px;
+        }
+    }
+
+    .contact {
         display: flex;
         flex-direction: column;
         align-content: flex-start;
-        margin-left: 65px;
+        margin-left: 40px;
         padding-top: 20px;
         padding-bottom: 20px;
+    } 
+
+    .contact__menu:not(:last-child) {
+        margin-bottom: 10px;
+    }
+        
+    .contact__list {
+        font-style: normal;
+    
+        @include font (500, 12px, 14px);
+    
+        letter-spacing: 0.02em;
+        color: var(--second-text-color);
+        transition: color var(--transition-duration-and-func);
+    
+        &:hover,
+        &:focus {
+            color: var(--fourth-text-color);
+        }
     }
 
-    @media screen and (min-width: 1200px) {
+    .contact__icon { 
+        fill: currentColor;
+        margin-right: 8px;
+    }
+}
+
+//1200-desktop
+@media screen and (min-width: 1200px) {
+    .logotype {
+        margin-right: 93px;
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+    .contact {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
         margin-left: auto;
         padding-top: 32px;
         padding-bottom: 32px;
     }
-}
-
-.contact__menu:not(:last-child) {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        margin-bottom: 10px;
-    }
-
-    @media screen and (min-width: 1200px){
+    
+    .contact__menu:not(:last-child) {
         margin-right: 50px;
     }
-}
-
-.contact__list {
-    font-style: normal;
-
-    @include font (500, 14px, 16px);
     
-    letter-spacing: 0.02em;
-    color: var(--second-text-color);
-    transition: color var(--transition-duration-and-func);
-
-    &:hover,
-    &:focus {
-        color: var(--fourth-text-color);
-    }
-
-    @media screen and (min-width: 768px) {
-        @include font (500, 12px, 14px);
-    }
-
-    @media screen and (min-width: 1200px) {
+    .contact__list {
         @include font (500, 14px, 16px);
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
-}
-
-.contact__icon { 
-    @media screen and (min-width: 768px) {
-    fill: currentColor;
-    margin-right: 8px;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
     
-    }
-
-    @media screen and (min-width: 1200px) {
-    margin-right: 10px;
+    .contact__icon {
+        margin-right: 10px;
     }
 }
-
-.btn__open { 
-    @media screen and (max-width: 480px) {
-        display: block;
-        border: none;
-        margin-left: auto;
-    }
-
-    @media screen and (min-width: 481px) {
-        display: none;
-    }
-    
-}
-
-.open__icon {
-    fill: var(--fourth-fill);
-}
-

@@ -2,18 +2,6 @@
     padding: 200px 0;
     text-align: center;
     width: 100%;
-    
-    @media screen and (min-width: 480px) {
-        width: 480px;
-    }
-    
-    @media screen and (min-width: 768px) {
-        width: 768px;
-    }
-    
-    @media screen and (min-width: 1200px) {
-        width: 100%;
-    }
 }
 
 .background {
@@ -21,11 +9,13 @@
     background-size: cover;
     background-position: border-box;
 
-    background-image: var(--bg-gradient), url('../images/bg-mob.jpg');
-
-    @include retina {
-        background-image: var(--bg-gradient), url('../images/bg-mob-2x.jpg');
-    }
+    @media screen and (max-width: 767px) {
+        background-image: var(--bg-gradient), url('../images/bg-mob.jpg');
+    
+        @include retina {
+            background-image: var(--bg-gradient), url('../images/bg-mob-2x.jpg');
+        }
+}
 
     @media screen and (min-width: 768px) {
         background-image: var(--bg-gradient), url('../images/bg-tab.jpg');
