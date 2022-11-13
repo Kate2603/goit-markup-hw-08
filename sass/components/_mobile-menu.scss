@@ -56,12 +56,16 @@
         background-color: var(--accent-background);
 
         transition: fill var(--transition-duration-and-func);
-
-        &:hover,
-        &:focus {
-            fill: var(--accent-fill);
-        }
     }
+
+        .close__icon {
+            transition: fill var(--transition-duration-and-func);
+    
+            .btn__close:hover &,
+            .btn__close:focus & {
+                fill: var(--accent-fill);
+            }
+        }
     
     .carte {
         margin-bottom: 64px;
