@@ -41,53 +41,49 @@
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
-            <button class="btn__open" type="button" data-menu-open><svg class="open__icon" width="40" height="40">
-                    <use href="./images/sprite.svg#burger-open"></use></svg>
+            <button class="btn__open js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="open__icon" width="40" height="40">
+                    <use href="./images/sprite.svg#burger-open"></use>
+                </svg>
             </button>
         </div>
         
-        <div class="mobile-menu is-open" data-menu>
-            <div class="container .mobile-menu__container">
-                <button class="btn__close" type="button" data-menu-close>
-                    <svg class="close__icon" width="40" height="40">
+        <div class="mobile-menu js-menu-container" id="mobile-menu">
+            <button class="btn__close js-close-menu" type="button">
+                <svg class="close__icon" width="40" height="40">
                         <use href="./images/sprite.svg#burger-close"></use>
                     </svg>
-                </button>
-                <div class="mob-top">
-                    <ul class="carte list">
-                        <li class="carte__point"><a class="carte__reference" href="index.html">Студія</a></li>
-                        <li class="carte__point"><a class="carte__reference current" href="portfolio.html">Портфоліо</a></li>
-                        <li class="carte__point"><a class="carte__reference" href="contact.html">Контакты</a></li>
-                    </ul>
-                </div>
+            </button>
+            
+            <ul class="carte list">
+                <li class="carte__point"><a class="carte__reference" href="index.html">Студія</a></li>
+                <li class="carte__point"><a class="carte__reference current" href="portfolio.html">Портфоліо</a></li>
+                <li class="carte__point"><a class="carte__reference" href="contact.html">Контакты</a></li>
+            </ul>
+            
+            <ul class="connect list">
+                <li class="connect__menu">
+                    <a class="connect__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+                <li class="connect__menu">
+                    <a class="connect__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+            </ul>
         
-                <div class="mob-bottom">
-                    <ul class="connect list">
-                        <li class="connect__menu">
-                            <a class="connect__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
-                        </li>
-                        <li class="connect__menu">
-                            <a class="connect__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                        </li>
-                    </ul>
-        
-                    <ul class="societal list">
-                        <li class="societal__item">
-                            <a class="societal__link" href="">Instagram</a>
-                        </li>
-                        <li class="societal__item">
-                            <a class="societal__link" href="">Twitter</a>
-                        </li>
-                        <li class="societal__item">
-                            <a class="societal__link" href="">Facebook</a>
-                        </li>
-                        <li class="societal__item">
-                            <a class="societal__link" href="">linkedin</a>
-                        </li>
-                    </ul>
-                </div>
-        
-            </div>
+            <ul class="societal list">
+                <li class="societal__item">
+                    <a class="societal__link" href="">Instagram</a>
+                </li>
+                <li class="societal__item">
+                    <a class="societal__link" href="">Twitter</a>
+                </li>
+                <li class="societal__item">
+                    <a class="societal__link" href="">Facebook</a>
+                </li>
+                <li class="societal__item">
+                    <a class="societal__link" href="">linkedin</a>
+                </li>
+            </ul>
         </div>
     </header>
     <!--MAIN-->
