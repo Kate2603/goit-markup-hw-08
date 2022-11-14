@@ -34,5 +34,6 @@ button {
 body {
     font-family: var(--accent-font), sans-serif;
     color: var(--accent-text-color);
-    
+    display: block;
+    width: 100%;
 }
