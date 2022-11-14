@@ -167,10 +167,18 @@
         padding-top: 24px;
         padding-bottom: 25px;
     }
+
+    .menu {
+        margin-left: 92px;
+    }
+
+    .contact__menu:not(:last-child) {
+        margin-right: 30px;
+    }
     .contact {
         display: flex;
         justify-content: baseline;
-        flex-direction: column;
+        flex-direction: row;
         margin-left: auto;
     }
     

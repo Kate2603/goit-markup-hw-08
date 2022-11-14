@@ -51,13 +51,9 @@
             fill: var(--accent-fill);
         }
     }
-
-    .mob-top {
-        position: relative;
-        margin-bottom: 50px;
-    }
     
     .carte {
+        display: inline-block;
         margin-bottom: 64px;
     }
     
