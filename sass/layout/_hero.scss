@@ -15,6 +15,7 @@
         @include retina {
             background-image: var(--bg-gradient), url('../images/bg-mob-2x.jpg');
         }
+    }
 
     .hero-title {
         @include font (900, 26px, 42px);
