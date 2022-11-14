@@ -108,11 +108,7 @@
     .societal {
         display: inline-flex;
     }
-    
-    .societal__item {
-        margin-left: 20px;
-    }
-    
+        
     .societal__link {
         @include font (500, 18px, 22px);
         letter-spacing: 0.02em;
@@ -121,7 +117,7 @@
         margin: 0;
     }
     
-    .societal__link:not(:last-child)::after {
+    .sosietal-after::after {
         content: "";
         width: 22px;
         height: 1px;
