@@ -48,6 +48,8 @@
         top: 10px;
         right: 15px;
         @extend %align;
+        width: 40px;
+        height: 40px;
         line-height: 0;
         border: none;
         border-radius: 50%;
@@ -80,11 +82,10 @@
         letter-spacing: 0.02em;
         text-decoration: none;
         color: var(--accent-text-color);
-    }
 
-    .current {
-        display: inline-block;
-        color: var(--fourth-text-color);
+        &.current {
+            color: var(--fourth-text-color);
+        }
     }
 
     .connect {
@@ -127,7 +128,6 @@
         background: rgba(33, 33, 33, .2);
         transform: rotate(90deg);
     }
-
 }
 
 //768-tablet
