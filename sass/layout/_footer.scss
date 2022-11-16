@@ -1,7 +1,7 @@
 //0-767px-mobile
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .newsletter__input {
-        display: block;
+        display: flex;
         width: 290px;
         height: 50px;
     }
@@ -210,7 +210,7 @@
 
 }
 
-//1200px-dekstop
+//1200px-desktop
 @media screen and (min-width: 1200px) {
     .footer__container {
         display: flex;
