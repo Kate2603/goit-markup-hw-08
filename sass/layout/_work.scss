@@ -1,5 +1,14 @@
 //mobile and tablet - visually-hidden
 @media screen and (max-width: 1199px) {
+    .all-titles {
+            @include font (700, 28px, 32px);
+    
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: var(--accent-text-color);
+            margin-bottom: 30px;
+        } 
+        
     .work-section {
         //class="visually-hidden"
         position: absolute;
@@ -14,7 +23,7 @@
     }
 }
 
-//1200px-dekstop
+//1200px-desktop
 @media screen and (min-width: 1200px) {
     .work-container {
         padding-top: 94px;

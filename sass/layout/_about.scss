@@ -1,5 +1,5 @@
-//0-767px-mobile
-@media screen and (max-width: 767px) {
+//320px-767px-mobile
+@media screen  and (min-width: 320px)  and (max-width: 479px) {
     .about-list {
         display: flex;
         flex-wrap: wrap;
@@ -7,9 +7,10 @@
     }
 
     .about-list-container {
-        @extend %align;
-    
-        width: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 290px;
         height: 120px;
         background-color: var(--fifth-background);
         border-radius: 4px;
@@ -34,6 +35,42 @@
     }
 }
 
+@media screen and (min-width: 480px) {
+    .about-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    
+        .about-list-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 450px;
+            height: 120px;
+            background-color: var(--fifth-background);
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+    
+        .about-title-item {
+            @include font (700, 14px, 16px);
+    
+            letter-spacing: 0.03em;
+            text-align: center;
+            text-transform: uppercase;
+            color: var(--accent-text-color);
+            margin-bottom: 10px;
+        }
+    
+        .about-paragraph {
+            @include font (400, 14px, 24px);
+    
+            letter-spacing: 0.03em;
+            color: var(--second-text-color);
+        }
+}
+
 //768px-tablet
 @media screen and (min-width: 768px) {
     .about-list-item {
@@ -49,7 +86,7 @@
     }
 }
 
-//1200px-dekstop
+//1200px-desktop
 @media screen and (min-width: 1200px) {
     .about-list {
         justify-content: center;
@@ -63,5 +100,4 @@
     .about-list-container {
         width: 270px;
     }
-
 }

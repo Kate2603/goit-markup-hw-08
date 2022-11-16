@@ -1,5 +1,5 @@
-//0-767-mobile
-@media screen and (max-width: 767px) {
+//320px-767-mobile
+@media screen  and (min-width: 320px) and (max-width: 767px) {
     .menu {
         display: none;
     }
@@ -33,6 +33,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    height: 60px;
 }
 
 .page-nav {
@@ -86,11 +88,17 @@
     }
 
     .page-header {
-        @extend %align;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80px;
     }
 
     .page-nav {
-        @extend %align;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .logotype {
@@ -100,7 +108,9 @@
     }
 
     .menu {
-        @extend %align;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     } 
 
     .menu__item:not(:last-child) {
@@ -120,8 +130,12 @@
             background-color: var(--third-background);
             border-radius: 2px;
             left: 0;
-            bottom: -1px;
+            bottom: -34px;
         }
+    }
+
+    .btn__open {
+        display: none;
     }
 
     .contact {
@@ -167,9 +181,104 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-    .contact__menu:not(:last-child) {
-            margin-bottom: 10px;
+    .header {
+            border-bottom: 1px solid #ECECEC;
         }
+    
+        .page-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .page-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .logotype {
+            margin-right: 80px;
+            padding-top: 26px;
+            padding-bottom: 26px;
+        }
+    
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .menu__item:not(:last-child) {
+            margin-right: 50px;
+        }
+    
+        .current {
+            display: block;
+            color: var(--third-color);
+    
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 4px;
+                background-color: var(--third-background);
+                border-radius: 2px;
+                left: 0;
+                bottom: -22px;
+            }
+        }
+    
+        .btn__open {
+            display: none;
+        }
+    
+        .contact {
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            margin-left: auto;
+            margin-right: 15px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+                .contact__menu:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+    
+        .contact__list {
+            font-style: normal;
+    
+            @include font (500, 12px, 14px);
+    
+            letter-spacing: 0.02em;
+            color: var(--second-text-color);
+            transition: color var(--transition-duration-and-func);
+    
+            &:hover,
+            &:focus {
+                color: var(--fourth-text-color);
+            }
+        }
+    
+        .contact__icon {
+            line-height: 0;
+            fill: currentColor;
+            margin-right: 8px;
+        }
+    
+        .icon-mail {
+            width: 14px;
+            height: 10px;
+        }
+    
+        .icon-tel {
+            width: 10px;
+            height: 14px;
+        }
+    
 }
 
 //1200-desktop
@@ -183,6 +292,23 @@
     .menu {
         margin-left: 92px;
     }
+
+        .current {
+            display: block;
+            color: var(--third-color);
+    
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 4px;
+                background-color: var(--third-background);
+                border-radius: 2px;
+                left: 0;
+                bottom: -22px;
+            }
+        }
 
     .contact__menu:not(:last-child) {
         margin-right: 30px;

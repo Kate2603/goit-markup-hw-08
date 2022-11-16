@@ -1,5 +1,5 @@
-//0-767px-mobile 
-@media screen and (max-width: 767px) {
+//320px-767px-mobile 
+@media screen and (min-width: 320px) and (max-width: 767px) {
     .modal-form {
         display: flex;
         flex-direction: column;
