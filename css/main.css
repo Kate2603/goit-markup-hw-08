@@ -357,7 +357,7 @@ body {
   margin-bottom: 12px;
 }
 
-.modal-form-imput-desc {
+.modal-form-input-desc {
   display: block;
   font-weight: 400;
   font-size: 12px;
@@ -367,7 +367,7 @@ body {
   margin-bottom: 4px;
 }
 
-.modal-form-imput-wrapper {
+.modal-form-input-wrapper {
   position: relative;
 }
 
@@ -390,7 +390,7 @@ body {
   border-color: var(--second-border-color);
 }
 
-.modal-form-imput-icon {
+.modal-form-input-icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -402,7 +402,7 @@ body {
   -webkit-transition: fill var(--transition-duration-and-func);
   transition: fill var(--transition-duration-and-func);
 }
-.modal-form-input:focus + .modal-form-imput-icon {
+.modal-form-input:focus + .modal-form-input-icon {
   fill: var(--accent-fill);
 }
 
